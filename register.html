@@ -10,6 +10,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+
+        if (user) {
+          // إذا كان المستخدم مسجل الدخول، انتقل مباشرة إلى الصفحة الرئيسية
+          window.location.href = "main.html";
+        }
+      });
+    </script>
 
     <title>Alquran web</title>
   </head>
@@ -19,41 +31,56 @@
 
       <div class="info">
         <h1>register</h1>
-        <h3 >
+        <h3>
           Start your day by reading the holy verses of the <br />
           Al-quran.
         </h3>
-        <form action="get">
-            <div class="input-container">
-                <input type="text" placeholder="full Name" required />
-                <span class="icon">
-                    <i class="fa-solid fa-user"></i>
-                </span>
-              </div>
+        <form id="register-form">
+          <!-- حقل الاسم -->
           <div class="input-container">
-            <input type="email" placeholder="E-mail" required />
+            <input id="reg-name" type="text" placeholder="Full Name" required />
+            <span class="icon">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+
+          <!-- حقل البريد الإلكتروني -->
+          <div class="input-container">
+            <input id="reg-email" type="email" placeholder="Email" required />
             <span class="icon">
               <i class="fa fa-envelope"></i>
             </span>
           </div>
 
+          <!-- حقل كلمة المرور -->
           <div class="input-container">
-            <input type="password" placeholder="Password" />
+            <input
+              id="reg-password"
+              type="password"
+              placeholder="Password"
+              required
+            />
             <span class="icon">
               <i class="fa fa-eye"></i>
             </span>
           </div>
+
+          <!-- حقل تأكيد كلمة المرور -->
           <div class="input-container">
-            <input type="password" placeholder="Password again" />
+            <input
+              id="reg-confirm-password"
+              type="password"
+              placeholder="Confirm Password"
+              required
+            />
             <span class="icon">
-                <i class="fa fa-eye"></i>
+              <i class="fa fa-eye"></i>
             </span>
           </div>
-          <div class="dpass-f">
-            <a href="" class="pass-f">forget the password?</a>
-          </div>
+
+          <!-- زر التسجيل -->
           <button class="btn1" type="submit">
-            <h1>register</h1>
+            <h1>Register</h1>
             <h1><i class="fa-solid fa-arrow-right"></i></h1>
           </button>
           <div class="icon-login">
@@ -61,9 +88,12 @@
             <img src="img/image 13.png" alt="" />
           </div>
         </form>
-        <p class="t-reg">Already have an account?<a href="index.html"> Log in</a></p>
-    </div>
+        <p class="t-reg">
+          Already have an account?<a href="index.html"> Log in</a>
+        </p>
+      </div>
     </section>
+    <script type="module" src="js/supabase.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

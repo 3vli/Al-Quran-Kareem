@@ -62,7 +62,7 @@
     justify-content: space-between;
     padding: 16px;
     border: none;
-    background-color: #32B7C5;
+    background-color: #007DFE;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.6s ease;
@@ -113,13 +113,10 @@
     position: relative;
     left: 90px;
     margin-top:20px;
-
-    
-
 }
-.t-reg span {
-    color: #32B7C5;
+.t-reg a {
+    color: #007DFE;
     cursor: pointer;
-    
+    text-decoration: none;
 }
 
