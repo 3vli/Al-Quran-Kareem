@@ -1,76 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Alquran" />
-    <meta name="description" content="alquran for reading muslims holy quran" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        const {
-          data: { user },
-        } = await supabase.auth.getUser();
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="/styles/index.css" />
+		<link rel="stylesheet" href="/styles/login.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
 
-        if (user) {
-          // إذا كان المستخدم مسجل الدخول، انتقل مباشرة إلى الصفحة الرئيسية
-          window.location.href = "main.html";
-        }
-      });
-    </script>
+		<title>Alquran karem</title>
+	</head>
+	<body>
+		<img class="bg" src="/imgs/img-main/BG.png" alt="" />
+		<header>
+			<div></div>
 
-    <title>Alquran web</title>
-  </head>
-  <body>
-    <section class="container">
-      <img src="img/login-img.png" alt="" />
-
-      <div class="info">
-        <h1>Log in</h1>
-        <h3>
-          Start your day by reading the holy verses of the <br />
-          Al-quran.
-        </h3>
-        <form id="login-form">
-          <div class="input-container">
-            <input id="email" type="email" placeholder="Email" required />
-            <span class="icon">
-              <i class="fa fa-envelope"></i>
-            </span>
-          </div>
-
-          <div class="input-container">
-            <input
-              id="password"
-              type="password"
-              placeholder="Password"
-              required
-            />
-            <span class="icon">
-              <i class="fa fa-eye"></i>
-            </span>
-          </div>
-
-          <button class="btn1" type="submit">
-            <h1>Log in</h1>
-            <h1><i class="fa-solid fa-arrow-right"></i></h1>
-          </button>
-
-          <div class="icon-login">
-            <img src="img/image 12.png" alt="" />
-            <img src="img/image 13.png" alt="" />
-          </div>
-        </form>
-        <p class="t-reg">
-          Don't have an account yet? <a href="register.html">register</a>
-        </p>
-      </div>
-    </section>
-    <script type="module" src="js/supabase.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+			<div class="input-container">
+				<input
+					type="search"
+					placeholder="Search for surahs in the Alquran..."
+				/>
+				<span class="icon">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</span>
+			</div>
+			<br />
+			<div class="fr-rd">
+				<p>Frequently read:</p>
+				<a href="">Alkahf</a><a href="">Al-bakara</a
+				><a href="">ArRhman</a><a href="">Qaf</a>
+			</div>
+			<div class="menu">
+				<button class="menu-item">
+					<span class="icon">⚙️</span>
+					<span>Surat</span>
+				</button>
+				<button class="menu-item">
+					<span class="icon">📄</span>
+					<span>Juz</span>
+				</button>
+				<button class="menu-item">
+					<span class="icon">📖</span>
+					<span>Halaman</span>
+				</button>
+				<button class="menu-item">
+					<span class="icon">⬇️</span>
+				</button>
+			</div>
+		</header>
+		<script type="module" src="/scripts/index.js"></script>
+	</body>
 </html>
