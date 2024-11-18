@@ -8,18 +8,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 	}
 });
 
-const inputContainers = document.querySelectorAll(".input-container");
+const togglePassword = document.querySelector('.fa-eye');
+const passwordInput = document.querySelector('input[type="password"]');
 
-inputContainers.forEach((container) => {
-	const button = container.querySelector(".icon");
-	const input = container.querySelector("input");
-	console.log(input);
-	const icon = button.querySelector("i");
-	let currentInputType = input.type;
-
-	button.addEventListener("click", () => {
-		currentInputType = currentInputType === "text" ? "password" : "text";
-		input.setAttribute("type", currentInputType);
-		icon.classList.toggle("fa-eye-slash");
-	});
+togglePassword.addEventListener('click', function () {
+    // تغيير نوع المدخل بين password و text
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    // تغيير أيقونة العين
+    this.classList.toggle('fa-eye-slash');
 });
