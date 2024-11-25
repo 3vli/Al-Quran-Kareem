@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="موقع مخصص لقراءة واستماع القرآن الكريم كاملاً مع تفسير وميزات إضافية لتسهيل الفهم والبحث.">
+    <meta name="keywords" content="القرآن الكريم, قراءة القرآن, استماع القرآن, تفسير القرآن, سور القرآن">
+    <meta name="author" content="موقع القرآن الكريم">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="موقع القرآن الكريم - تلاوة وتفسير القرآن">
+    <meta property="og:description" content="اكتشف جمال القرآن الكريم مع قراءة، استماع، وتفسير كامل لجميع السور.">
+    <meta property="og:image" content="/imgs/cover.png"> <!-- ضع رابط الصورة الخاصة بالموقع -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com"> <!-- ضع رابط موقعك -->
+    <meta property="og:locale" content="ar_AR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="موقع القرآن الكريم">
+    <meta name="twitter:description" content="استمتع بقراءة القرآن الكريم وتفسيره مع ميزات تسهل الفهم.">
+    <meta name="twitter:image" content="/imgs/cover.png">
+    <link rel="icon" type="image/x-icon" href="/imgs/img-main/Logo.png">
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <title>Al-Quran Kareem</title>
+  </head>
+  <body>
+    <img class="bg" src="/imgs/img-main/BG.png" alt="" />
+    <header>
+		<img class="img-logo" src="/imgs/logo.png" alt="">
+      <div class="user-menu">
+        <div class="user-info" id="user-menu-btn">
+          <span class="user-name">Abu Yahya</span>
+          <span class="arrow">&#9662;</span>
+          <div class="avatar">AY</div>
+        </div>
+        <ul class="dropdown" id="user-menu-dropdown">
+          <li class="logout" id="logout-btn">Logout</li>
+        </ul>
+      </div>
+
+      <div class="input-container">
+        <input
+          type="search"
+          placeholder="Search for surahs in the Alquran..."
+        />
+        <span class="icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+      </div>
+      <br />
+      <div class="fr-rd">
+        <p>Frequently read:</p>
+        <a href="">Alkahf</a><a href="">Al-bakara</a><a href="">ArRhman</a
+        ><a href="">Qaf</a>
+      </div>
+      <div class="menu" role="tablist">
+        <button class="menu-item" role="tab">
+          <span class="icon"><i class="fa-solid fa-book-quran"></i></span>
+          <span>Surat</span>
+        </button>
+        <button class="menu-item" role="tab">
+          <span class="icon"><i class="fa-solid fa-file"></i></span>
+          <span>Juz</span>
+        </button>
+        <button class="menu-item" role="tab">
+          <span class="icon"><i class="fa-solid fa-book-open"></i></span>
+          <span>Halaman</span>
+        </button>
+        <button class="menu-item" role="tab">
+          <span class="icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+      </div>
+    </header>
+	<section id="cards-section">
+        <!-- إنشاء 114 كارد -->
+        <div class="card" onclick="showSurahSection(1)">
+            <div class="card-number">1</div>
+            <div class="card-content">
+                <h3>الفاتحة</h3>
+                <p>
+                    <span>Makiyyah</span> - <span>7 Ayat</span>
+                </p>
+            </div>
+        </div>
+		<div class="card" onclick="showSurahSection(1)">
+            <div class="card-number">2</div>
+            <div class="card-content">
+                <h3>البقرة</h3>
+                <p>
+                    <span>Makiyyah</span> - <span>267 Ayat</span>
+                </p>
+            </div>
+        </div>
+		<div class="card" onclick="showSurahSection(1)">
+            <div class="card-number">3</div>
+            <div class="card-content">
+                <h3>ال عمران</h3>
+                <p>
+                    <span>Makiyyah</span> - <span>200 Ayat</span>
+                </p>
+            </div>
+        </div>
+		<div class="card" onclick="showSurahSection(1)">
+            <div class="card-number">4</div>
+            <div class="card-content">
+                <h3>النساء</h3>
+                <p>
+                    <span>Makiyyah</span> - <span>176 Ayat</span>
+                </p>
+            </div>
+        </div>
+		<div class="card" onclick="showSurahSection(1)">
+            <div class="card-number">5</div>
+            <div class="card-content">
+                <h3>المائدة</h3>
+                <p>
+                    <span>Makiyyah</span> - <span>120 Ayat</span>
+                </p>
+            </div>
+        </div>
+		<div class="card" onclick="showSurahSection(1)">
+            <div class="card-number">6</div>
+            <div class="card-content">
+                <span>الانعام</span>
+                <p>
+                    <span>Makiyyah</span> - <span>165 Ayat</span>
+                </p>
+            </div>
+        </div>
+        <!-- كرر الكارد 114 مرة بتغيير الرقم واسم السورة -->
+    </section>
+
+    <!-- قسم السورة -->
+    <section id="surah-section" style="display: none;">
+        <h2>محتوى السورة</h2>
+        <p>هنا يمكن وضع تفاصيل عن السورة.</p>
+        <button onclick="goBack()">عودة إلى الكروت</button>
+    </section>
+    <script type="module" src="/scripts/index.js"></script>
+  </body>
+</html>

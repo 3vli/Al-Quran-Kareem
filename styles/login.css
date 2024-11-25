@@ -1,0 +1,123 @@
+* {
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+.container {
+	height: 100vh;
+	display: flex;
+	font-weight: bold;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.info {
+	padding: 170px;
+}
+.info h3 {
+	opacity: 60%;
+	margin-top: 10px;
+}
+/* حاوية المدخل */
+.input-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 5px;
+	/* margin-bottom: 15px; */
+	width: 100%; /* الحجم حسب احتياجك */
+	margin-top: 15px;
+}
+
+/* نمط المدخل */
+.input-container input {
+	border: none;
+	outline: none;
+	padding: 10px;
+	padding-right: 40px; /* مساحة لأيقونة */
+	font-size: 16px;
+	width: 100%;
+	border-radius: 8px;
+}
+
+/* نمط الأيقونة */
+.input-container .icon {
+	position: absolute;
+	right: 10px; /* مكان الأيقونة إلى اليمين */
+	color: #aaa; /* لون الأيقونة */
+	font-size: 18px;
+	cursor: pointer;
+	padding: 5px;
+}
+.info .btn1 {
+	display: flex;
+	width: 423px;
+	margin-top: 30px;
+	height: 48px;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px;
+	border: none;
+	background-color: #007dfe;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: 0.6s ease;
+}
+.info .btn1:hover {
+	transform: translateY(-2px);
+}
+.info button h1 {
+	color: #fff;
+}
+.icon-login {
+	display: flex;
+	margin-top: 40px;
+	text-align: center;
+	align-items: center;
+}
+.icon-login img:first-child {
+	margin-left: 93px;
+	cursor: pointer;
+	padding: 0 42px;
+}
+.icon-login img {
+	cursor: pointer;
+	transition: 0.6s ease;
+}
+.icon-login img:hover {
+	transform: scale(1.1);
+}
+
+.background {
+	width: 64vh;
+	height: 100vh;
+}
+.pass-f {
+	position: relative;
+	left: 264px;
+	top: 14px;
+	cursor: pointer;
+	color: #32b7c5;
+	text-decoration: none;
+	margin-top: 30px;
+}
+.t-reg {
+	font-size: 14px;
+	position: relative;
+	left: 90px;
+	margin-top: 20px;
+}
+.t-reg a {
+	color: #007dfe;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#visibile-button {
+	all: unset;
+	color: #aaa;
+	padding: 10px;
+}
