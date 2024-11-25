@@ -27,5 +27,5 @@ const logoutButton = document.getElementById('logout-btn');
 logoutButton.addEventListener('click', async () => {
   alert('Logging out...');
   await supabase.auth.signOut(); // تسجيل الخروج من Supabase
-  window.location.href = 'login.html'; // توجيه المستخدم إلى صفحة تسجيل الدخول
+  window.location.href = 'pages/login.html'; // توجيه المستخدم إلى صفحة تسجيل الدخول
 });
