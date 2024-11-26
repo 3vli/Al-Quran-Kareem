@@ -1,12 +1,10 @@
 {
-    "rewrites": [
-      {
-        "source": "/register",
-        "destination": "/register.html"
-      },
-      {
-        "source": "/login",
-        "destination": "/login.html"
-      }
+    "rewrite":
+    [
+        
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
     ]
-  }
+}
