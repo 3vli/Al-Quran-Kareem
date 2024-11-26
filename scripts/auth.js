@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const { data } = await supabase.auth.getUser();
 
 	if (data.user) {
-		window.location.href = "/";
+		window.location.href = "/index.html";
 	}
 });
 
