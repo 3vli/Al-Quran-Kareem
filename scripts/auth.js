@@ -3,8 +3,8 @@ import { supabase } from "./supabase";
 document.addEventListener("DOMContentLoaded", async () => {
 	const { data } = await supabase.auth.getUser();
 
-	if (data.user && window.location.pathname !== '/index.html') {
-		window.location.href = "index.html";
+	if (data.user && window.location.pathname !== '/') {
+		window.location.href = "/";
 	}
 });
 

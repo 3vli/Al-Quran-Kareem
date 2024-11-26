@@ -40,7 +40,7 @@ form.addEventListener("submit", async (e) => {
             "Registration successful! Please check your email for verification.",
         );
         setTimeout(() => {
-            location.pathname = "index.html";
+            location.pathname = "/";
         }, 1000);
     } catch (err) {
         console.error("Unexpected error:", err);
