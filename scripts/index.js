@@ -3,10 +3,11 @@ import { supabase } from "./supabase";
 document.addEventListener("DOMContentLoaded", async () => {
 	const { data } = await supabase.auth.getUser();
 
-	if (!data.user) {
-		window.location.href = "/pages/login.html";
+	if (!data.user && window.location.pathname !== '/login.html') {
+		window.location.href = "login.html";
 	}
 });
+
 // عند الضغط على المستخدم
 const menuButton = document.getElementById('user-menu-btn');
 const dropdown = document.getElementById('user-menu-dropdown');
@@ -27,5 +28,5 @@ const logoutButton = document.getElementById('logout-btn');
 logoutButton.addEventListener('click', async () => {
   alert('Logging out...');
   await supabase.auth.signOut(); // تسجيل الخروج من Supabase
-  window.location.href = 'pages/login.html'; // توجيه المستخدم إلى صفحة تسجيل الدخول
+  window.location.href = 'login.html'; // توجيه المستخدم إلى صفحة تسجيل الدخول
 });

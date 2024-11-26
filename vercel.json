@@ -2,12 +2,11 @@
     "rewrites": [
       {
         "source": "/register",
-        "destination": "/pages/register.html"
+        "destination": "/register.html"
       },
       {
         "source": "/login",
-        "destination": "/pages/login.html"
+        "destination": "/login.html"
       }
     ]
   }
-  
