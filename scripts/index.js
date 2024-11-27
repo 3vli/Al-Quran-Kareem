@@ -3,8 +3,8 @@ import { supabase } from "./supabase";
 document.addEventListener("DOMContentLoaded", async () => {
 	const { data } = await supabase.auth.getUser();
 
-	if (!data.user && window.location.pathname !== '/login') {
-		window.location.href = "/login";
+	if (!data.user && window.location.pathname !== '/login.html') {
+		window.location.href = "/login.html";
 	}
 });
 
@@ -28,7 +28,7 @@ const logoutButton = document.getElementById('logout-btn');
 logoutButton.addEventListener('click', async () => {
   alert('Logging out...');
   await supabase.auth.signOut(); // تسجيل الخروج من Supabase
-  window.location.href = '/login'; // توجيه المستخدم إلى صفحة تسجيل الدخول
+  window.location.href = '/login.html'; // توجيه المستخدم إلى صفحة تسجيل الدخول
 });
 
 const surahs = [
