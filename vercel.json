@@ -1,19 +1,10 @@
 {
-    "rewrites": [
-      {
-        "source": "/register",
-        "destination": "/register.html"
-      },
-      {
-        "source": "/login",
-        "destination": "/login.html"
-      },
-      {
-        "source": "/",
-        "destination": "/index.html"
-      }
-    ]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
 
-    
-  }
   
+}
