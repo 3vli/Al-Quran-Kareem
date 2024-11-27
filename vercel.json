@@ -2,27 +2,18 @@
     "rewrites": [
       {
         "source": "/register",
-        "destination": "/register.html"
+        "destination": "/public/pages/register.html"
       },
       {
         "source": "/login",
-        "destination": "/login.html"
+        "destination": "/public/pages/login.html"
       },
       {
         "source": "/",
         "destination": "/index.html"
       }
-    ],
-
-    "version":2,
-    "builds": [
-      { "src": "*.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-        {
-          "src": "/(.*)",
-          "dest": "/"
-        }
     ]
+
+    
   }
   

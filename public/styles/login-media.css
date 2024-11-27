@@ -1,0 +1,14 @@
+@media screen and (max-width: 400px) {
+    img {
+        display: none;
+    }
+    body {
+        
+        display: grid;
+    }
+    img-media {
+        display: block;
+
+    }
+    
+}
