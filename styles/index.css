@@ -187,6 +187,7 @@ header {
   
   .dropdown li:hover {
 	background-color: #f5f5f5;
+	border-radius: 8px;
   }
   
   /* تصميم زر تسجيل الخروج */
@@ -206,6 +207,11 @@ header {
     justify-content: center;
     padding: 20px;
     gap: 20px;
+}
+#surah-list {
+	display: flex;
+	flex-wrap: wrap; /* يسمح بلف العناصر في الصف التالي عند امتلاء الصف الأول */
+	gap: 10px; /* المسافة بين الكروت */
 }
 
 .card {

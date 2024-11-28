@@ -3,10 +3,11 @@ import { supabase } from "./supabase";
 document.addEventListener("DOMContentLoaded", async () => {
 	const { data } = await supabase.auth.getUser();
 
-	if (data.user) {
+	if (data.user && window.location.pathname !== '/') {
 		window.location.href = "/";
 	}
 });
+
 
 const togglePassword = document.querySelector('.fa-eye');
 const passwordInput = document.querySelector('input[type="password"]');

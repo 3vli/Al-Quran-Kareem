@@ -20,7 +20,7 @@ form.addEventListener("submit", async (e) => {
 		} else {
 			console.log("Login successful:", data);
 			alert("Login successful!");
-			window.location.href = "/index.html";
+			window.location.href = "/";
 		}
 	} catch (err) {
 		console.error("Unexpected error:", err);

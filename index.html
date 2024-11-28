@@ -32,9 +32,9 @@
 		<img class="img-logo" src="/imgs/logo.png" alt="">
       <div class="user-menu">
         <div class="user-info" id="user-menu-btn">
-          <span class="user-name">Abu Yahya</span>
+          <span id="user-name" class="user-name">Abu Yahya</span>
           <span class="arrow">&#9662;</span>
-          <div class="avatar">AY</div>
+          <div id="user-avatar" class="avatar">AY</div>
         </div>
         <ul class="dropdown" id="user-menu-dropdown">
           <li class="logout" id="logout-btn">Logout</li>
@@ -76,69 +76,9 @@
     </header>
 	<section id="cards-section">
         <!-- إنشاء 114 كارد -->
-        <div class="card" onclick="showSurahSection(1)">
-            <div class="card-number">1</div>
-            <div class="card-content">
-                <h3>الفاتحة</h3>
-                <p>
-                    <span>Makiyyah</span> - <span>7 Ayat</span>
-                </p>
-            </div>
-        </div>
-		<div class="card" onclick="showSurahSection(1)">
-            <div class="card-number">2</div>
-            <div class="card-content">
-                <h3>البقرة</h3>
-                <p>
-                    <span>Makiyyah</span> - <span>267 Ayat</span>
-                </p>
-            </div>
-        </div>
-		<div class="card" onclick="showSurahSection(1)">
-            <div class="card-number">3</div>
-            <div class="card-content">
-                <h3>ال عمران</h3>
-                <p>
-                    <span>Makiyyah</span> - <span>200 Ayat</span>
-                </p>
-            </div>
-        </div>
-		<div class="card" onclick="showSurahSection(1)">
-            <div class="card-number">4</div>
-            <div class="card-content">
-                <h3>النساء</h3>
-                <p>
-                    <span>Makiyyah</span> - <span>176 Ayat</span>
-                </p>
-            </div>
-        </div>
-		<div class="card" onclick="showSurahSection(1)">
-            <div class="card-number">5</div>
-            <div class="card-content">
-                <h3>المائدة</h3>
-                <p>
-                    <span>Makiyyah</span> - <span>120 Ayat</span>
-                </p>
-            </div>
-        </div>
-		<div class="card" onclick="showSurahSection(1)">
-            <div class="card-number">6</div>
-            <div class="card-content">
-                <span>الانعام</span>
-                <p>
-                    <span>Makiyyah</span> - <span>165 Ayat</span>
-                </p>
-            </div>
-        </div>
-        <!-- كرر الكارد 114 مرة بتغيير الرقم واسم السورة -->
-    </section>
-
-    <!-- قسم السورة -->
-    <section id="surah-section" style="display: none;">
-        <h2>محتوى السورة</h2>
-        <p>هنا يمكن وضع تفاصيل عن السورة.</p>
-        <button onclick="goBack()">عودة إلى الكروت</button>
-    </section>
+        <div id="surah-list"></div>
+  </section>
+    
     <script type="module" src="/scripts/index.js"></script>
   </body>
 </html>
