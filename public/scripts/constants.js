@@ -1,37 +1,3 @@
-import { supabase } from "./supabase";
-
-document.addEventListener("DOMContentLoaded", async () => {
-	const { data } = await supabase.auth.getUser();
-
-	if (!data.user && window.location.pathname !== "/login.html") {
-		window.location.href = "/login.html";
-	}
-});
-
-const menuButton = document.getElementById("user-menu-btn");
-const dropdown = document.getElementById("user-menu-dropdown");
-
-menuButton.addEventListener("click", () => {
-	dropdown.style.display =
-		dropdown.style.display === "block" ? "none" : "block";
-});
-
-document.addEventListener("click", (event) => {
-	if (
-		!menuButton.contains(event.target) &&
-		!dropdown.contains(event.target)
-	) {
-		dropdown.style.display = "none";
-	}
-});
-
-const logoutButton = document.getElementById("logout-btn");
-logoutButton.addEventListener("click", async () => {
-	alert("Logging out...");
-	await supabase.auth.signOut();
-	window.location.href = "/login.html";
-});
-
 const surahs = [
 	{ name: "الفاتحة", type: "Makiyyah", ayat: 7 },
 	{ name: "البقرة", type: "Madaniyyah", ayat: 286 },
@@ -149,35 +115,4 @@ const surahs = [
 	{ name: "الناس", type: "Makiyyah", ayat: 6 },
 ];
 
-const surahList = document.getElementById("surah-list");
-
-surahs.forEach((surah, index) => {
-	const card = document.createElement("div");
-	card.className = "card";
-	card.setAttribute("onclick", `showSurahSection(${index + 1})`);
-
-	const cardNumber = document.createElement("div");
-	cardNumber.className = "card-number";
-	cardNumber.textContent = index + 1;
-
-	const cardContent = document.createElement("div");
-	cardContent.className = "card-content";
-
-	const surahName = document.createElement("span");
-	surahName.textContent = surah.name;
-
-	const surahDetails = document.createElement("p");
-	surahDetails.innerHTML = `<span>${surah.type}</span> - <span>${surah.ayat} Ayat</span>`;
-
-	cardContent.appendChild(surahName);
-	cardContent.appendChild(surahDetails);
-
-	card.appendChild(cardNumber);
-	card.appendChild(cardContent);
-
-	surahList.appendChild(card);
-});
-
-function showSurahSection(surahNumber) {
-	alert(`تم اختيار السورة رقم ${surahNumber}`);
-}
+export { surahs };
