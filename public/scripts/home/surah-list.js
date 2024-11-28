@@ -20,7 +20,7 @@ surahs.forEach((surah, index) => {
 	surahName.textContent = surah.name;
 
 	const surahDetails = document.createElement("p");
-	surahDetails.innerHTML = `<span><i class="fa-solid fa-location-crosshairs"></i> ${surah.type}</span> <i class="fa-solid fa-minus"></i> <span>  ${surah.ayat} Ayat</span>`;
+	surahDetails.innerHTML = `<span><i class="fa-solid fa-location-crosshairs"></i> ${surah.type} </span> <i class="fa-solid fa-minus"></i> <span>  ${surah.ayat} Ayat</span>`;
 
 	cardContent.appendChild(surahName);
 	cardContent.appendChild(surahDetails);
@@ -34,4 +34,5 @@ surahs.forEach((surah, index) => {
 function showSurahSection(surahNumber) {
 	const surah = surahs[surahNumber];
 	alert(surah.name);
+	window.location.href = "/pages/surah.html"
 }
