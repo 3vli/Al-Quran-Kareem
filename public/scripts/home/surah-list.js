@@ -11,7 +11,7 @@ surahs.forEach((surah, index) => {
 
 	const cardNumber = document.createElement("div");
 	cardNumber.className = "card-number";
-	cardNumber.textContent = index;
+	cardNumber.textContent = index + 1;
 
 	const cardContent = document.createElement("div");
 	cardContent.className = "card-content";
