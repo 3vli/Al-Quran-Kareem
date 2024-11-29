@@ -1,4 +1,4 @@
-import { supabase } from "/lib/supabase.js";
+import { supabase } from "/src/scripts/lib/supabase.js";
 
 const form = document.getElementById("register-form");
 

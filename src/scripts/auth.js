@@ -1,4 +1,4 @@
-import { supabase } from "/lib/supabase.js";
+import { supabase } from "/src/scripts/lib/supabase.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
 	const { data } = await supabase.auth.getUser();

@@ -37,109 +37,87 @@
 			content="استمتع بقراءة القرآن الكريم وتفسيره مع ميزات تسهل الفهم."
 		/>
 		<meta name="twitter:image" content="/imgs/cover.png" />
-		<link rel="stylesheet" href="/styles/register.css" />
-		<link rel="stylesheet" href="../styles/register-media.css">
+		<link rel="stylesheet" href="/src/styles/login.css" />
+		<link rel="icon" type="image/x-icon" href="/imgs/img-main/Logo.png" />
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 		/>
-		<link rel="icon" type="image/x-icon" href="/imgs/img-main/Logo.png" />
-
+		<link rel="stylesheet" href="/src/styles/login-media.css" />
 		<title>Al-Quran Kareem</title>
 	</head>
 	<body>
-		<img class="img-media" src="/imgs/mobilelogin.png" alt="" />
 		<section class="container">
-			<img class="BG" src="/imgs/login-img.png" alt="" />
+			<img class="img-media" src="/imgs/mobilelogin.png" alt="" />
+			<img class="BG" src="/imgs/login-img.png" alt="Login Image" />
 
 			<div class="info">
-				<h1>register</h1>
+				<h1>Log in</h1>
 				<h3>
 					Start your day by reading the holy verses of the <br />
-					Al-quran.
+					Al-Quran.
 				</h3>
-				<form id="register-form">
-					<!-- Name field -->
+				<form id="login-form">
 					<div class="input-container">
 						<input
-							name="reg-name"
-							type="text"
-							placeholder="Full Name"
-							required
-						/>
-						<span class="icon">
-							<i class="fa-solid fa-user"></i>
-						</span>
-					</div>
-
-					<!-- Email field -->
-					<div class="input-container">
-						<input
-							name="reg-email"
+							id="email"
 							type="email"
+							name="email"
 							placeholder="Email"
 							required
 						/>
 						<span class="icon">
-							<i class="fa-solid fa-envelope"></i>
+							<i class="fa fa-envelope"></i>
 						</span>
 					</div>
 
-					<!-- Password field -->
 					<div class="input-container">
 						<input
-							name="reg-password"
+							id="password"
 							type="password"
+							name="password"
 							placeholder="Password"
 							required
 						/>
-						<span class="icon">
+						<button
+							id="visibile-button"
+							type="button"
+							class="icon"
+							onclick="togglePasswordVisibility()"
+						>
 							<i class="fa fa-eye"></i>
-						</span>
+						</button>
 					</div>
 
-					<!-- Confirm password field -->
-					<div class="input-container">
-						<input
-							name="reg-confirm-password"
-							type="password"
-							placeholder="Confirm Password"
-							required
-						/>
-						<span class="icon">
-							<i class="fa fa-eye"></i>
-						</span>
-					</div>
-
-					<!-- Submit button -->
 					<button class="btn1" type="submit">
-						<h1>Register</h1>
+						<h1>Log in</h1>
 						<h1><i class="fa-solid fa-arrow-right"></i></h1>
 					</button>
+
 					<div class="icon-login">
-						<img src="/imgs/image 12.png" alt="" />
-						<img src="/imgs/image 13.png" alt="" />
+						<img src="/imgs/image 12.png" alt="Icon 1" />
+						<img src="/imgs/image 13.png" alt="Icon 2" />
 					</div>
 				</form>
-
 				<p class="t-reg">
-					Already have an account?<a href="/pages/login.html">
-						Log in</a
-					>
+					Don't have an account yet?
+					<a href="/register"> Register</a>
 				</p>
 			</div>
 		</section>
 		<footer>
 			<p>© 2025 quran Software Labs, All Rights Reserved.</p>
-	  
+
 			<div class="footer-icon">
-			  <a href=""><i class="fa-brands fa-discord"></i></a>
-			  <a href=""><i class="fa-brands fa-instagram"></i></a>
-			  <a href=""><i class="fa-brands fa-linkedin"></i></a>
-			  <a href=""><i class="fa-brands fa-tiktok"></i></a>
+				<a href=""><i class="fa-brands fa-discord"></i></a>
+				<a href=""><i class="fa-brands fa-instagram"></i></a>
+				<a href=""><i class="fa-brands fa-linkedin"></i></a>
+				<a href=""><i class="fa-brands fa-tiktok"></i></a>
 			</div>
-		  </footer>
-		<script type="module" src="/scripts/auth.js"></script>
-		<script type="module" src="/scripts/register.js"></script>
+		</footer>
+
+		<script type="module" src="/src/scripts/auth.js"></script>
+		<script type="module" src="/src/scripts/login.js"></script>
 	</body>
 </html>

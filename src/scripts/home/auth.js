@@ -1,9 +1,9 @@
-import { supabase } from "/lib/supabase.js";
+import { supabase } from "/src/scripts/lib/supabase.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
 	const { data } = await supabase.auth.getUser();
-	if (!data.user && window.location.pathname !== "/pages/login.html") {
-		window.location.href = "/pages/login.html";
+	if (!data.user && window.location.pathname !== "/login") {
+		window.location.href = "/login";
 	}
 });
 
@@ -12,5 +12,5 @@ const logoutButton = document.getElementById("logout-btn");
 logoutButton.addEventListener("click", async () => {
 	alert("Logging out...");
 	await supabase.auth.signOut();
-	window.location.href = "/pages/login.html";
+	window.location.href = "//login";
 });

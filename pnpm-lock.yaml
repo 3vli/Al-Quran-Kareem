@@ -12,6 +12,9 @@ importers:
         specifier: ^2.46.1
         version: 2.46.1
     devDependencies:
+      connect-history-api-fallback:
+        specifier: ^2.0.0
+        version: 2.0.0
       vite:
         specifier: ^5.4.10
         version: 5.4.11(@types/node@22.9.0)
@@ -280,6 +283,10 @@ packages:
   '@types/ws@8.5.13':
     resolution: {integrity: sha512-osM/gWBTPKgHV8XkTunnegTRIsvF6owmf5w+JtAfOw472dptdm0dlGv4xCt6GwQRcC2XVOvvRE/0bAoQcL2QkA==}
 
+  connect-history-api-fallback@2.0.0:
+    resolution: {integrity: sha512-U73+6lQFmfiNPrYbXqr6kZ1i1wiRqXnp2nhMsINseWXO8lDau0LGEffJ8kQi4EjLZympVgRdvqjAgiZ1tgzDDA==}
+    engines: {node: '>=0.8'}
+
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
     engines: {node: '>=12'}
@@ -544,6 +551,8 @@ snapshots:
   '@types/ws@8.5.13':
     dependencies:
       '@types/node': 22.9.0
+
+  connect-history-api-fallback@2.0.0: {}
 
   esbuild@0.21.5:
     optionalDependencies:

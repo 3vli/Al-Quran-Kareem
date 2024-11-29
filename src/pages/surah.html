@@ -38,7 +38,7 @@
 		/>
 		<meta name="twitter:image" content="/imgs/cover.png" />
 		<link rel="icon" type="image/x-icon" href="/imgs/img-main/Logo.png" />
-		<link rel="stylesheet" href="/src/styles/index.css" />
+		<link rel="stylesheet" href="/src/styles/surah.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -47,9 +47,10 @@
 		<title>Al-Quran Kareem</title>
 	</head>
 	<body>
-		<img class="bg" src="/imgs/img-main/BG.png" alt="" />
+		<img class="BG" src="/imgs/img-main/BG.png" alt="" />
 		<header>
-			<img class="img-logo" src="/imgs/logo.png" alt="" />
+			<a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+			<img class="logo" src="/imgs/logo.png" alt="" />
 			<div class="user-menu">
 				<div class="user-info" id="user-menu-btn">
 					<span
@@ -64,51 +65,24 @@
 					<li class="logout" id="logout-btn">Logout</li>
 				</ul>
 			</div>
-
-			<div class="input-container">
-				<input
-					type="search"
-					placeholder="Search for surahs in the Alquran..."
-				/>
-				<span class="icon">
-					<i class="fa-solid fa-magnifying-glass"></i>
-				</span>
-			</div>
-			<br />
-			<div class="fr-rd">
-				<p>Frequently read:</p>
-				<a href="">Alkahf</a><a href="">Al-bakara</a
-				><a href="">ArRhman</a><a href="">Qaf</a>
-			</div>
-			<div class="menu" role="tablist">
-				<button class="menu-item" role="tab">
-					<span class="icon"
-						><i class="fa-solid fa-book-quran"></i
-					></span>
-					<span>Surat</span>
-				</button>
-				<button class="menu-item" role="tab">
-					<span class="icon"
-						><i class="fa-solid fa-file"></i
-					></span>
-					<span>Juz</span>
-				</button>
-				<button class="menu-item" role="tab">
-					<span class="icon"
-						><i class="fa-solid fa-book-open"></i
-					></span>
-					<span>Halaman</span>
-				</button>
-				<button class="menu-item" role="tab">
-					<span class="icon"
-						><i class="fa-solid fa-bars"></i
-					></span>
-				</button>
-			</div>
 		</header>
-		<section id="cards-section">
-			<div id="surah-list"></div>
+		<section class="surah-content">
+			<a href=""><i class="fa-solid fa-arrow-left"></i></a>
+			<div class="surah-c">
+				<div class="surah-header">
+					<select name="" id="">
+						Halaman
+					</select>
+					<select name="" id="">
+						surat
+					</select>
+					<a href=""></a>
+				</div>
+				<div id="content-surah"></div>
+			</div>
+			<a href=""><i class="fa-solid fa-arrow-right"></i></a>
 		</section>
+
 		<footer>
 			<p>© 2025 quran Software Labs, All Rights Reserved.</p>
 
@@ -119,7 +93,6 @@
 				<a href=""><i class="fa-brands fa-tiktok"></i></a>
 			</div>
 		</footer>
-
-		<script type="module" src="/src/scripts/home/index.js"></script>
+		<script type="module" src="/src/scripts/home/user-data.js"></script>
 	</body>
 </html>
