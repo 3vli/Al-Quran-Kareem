@@ -37,5 +37,5 @@ surahs.forEach((surah, index) => {
 function showSurahSection(surahNumber) {
 	const surah = surahs[surahNumber];
 	console.log(surah.name);
-	window.location.href = "/pages/surah.html"
+	window.location.href = "/surah";
 }
