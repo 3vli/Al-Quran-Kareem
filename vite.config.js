@@ -5,10 +5,10 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			input: {
-				index: "./index.html",
-				register: "src/pages/register.html",
-				login: "src/pages/login.html",
-				surah: "src/pages/surah.html",
+				index: "./index.html", // Home page
+				login: "./src/pages/login.html", // Login page
+				register: "./src/pages/register.html", // Register page
+				surah: "./src/pages/surah.html", // Surah page
 			},
 		},
 	},
@@ -22,10 +22,7 @@ export default defineConfig({
 				server.middlewares.use(
 					history({
 						rewrites: [
-							{
-								from: /^\/$/,
-								to: "/index.html",
-							},
+							{ from: /^\/$/, to: "/index.html" },
 							{
 								from: /^\/login$/,
 								to: "/src/pages/login.html",
