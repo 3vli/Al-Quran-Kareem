@@ -14,7 +14,7 @@
     }
     .input-container {
         display: flex;
-        width: 400px;
+        width: 375px;
         
     }
     .user-info span {
@@ -29,7 +29,10 @@
         width: 156px;
     }
     .fr-rd a{
-        padding: 13px;
+        padding: 9px;
+    }
+    .input-container .icon {
+        right: 30px;
     }
     .card {
         width: 342px;

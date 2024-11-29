@@ -25,6 +25,7 @@ header {
 }
 .input-container {
 	display: flex;
+	justify-content: space-between;
 	text-align: center;
 	align-items: center;
 	border: 1px solid #ccc;
@@ -52,8 +53,8 @@ header {
 
 /* نمط الأيقونة */
 .input-container .icon {
-	position: absolute;
-	right: 10px; /* مكان الأيقونة إلى اليمين */
+	position: relative;
+	right: 20px;
 	color: #aaa; /* لون الأيقونة */
 	font-size: 18px;
 	cursor: pointer;
