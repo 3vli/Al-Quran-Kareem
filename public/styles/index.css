@@ -259,6 +259,11 @@ header {
 	padding: 3px 5px;
 	border-radius: 4px;
 }
+.card-content p i {
+	color: #828282;
+	margin: 0 3px;
+
+}
 
 #surah-section {
 	text-align: center;

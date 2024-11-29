@@ -1,118 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<meta
-			name="description"
-			content="موقع مخصص لقراءة واستماع القرآن الكريم كاملاً مع تفسير وميزات إضافية لتسهيل الفهم والبحث."
-		/>
-		<meta
-			name="keywords"
-			content="القرآن الكريم, قراءة القرآن, استماع القرآن, تفسير القرآن, سور القرآن"
-		/>
-		<meta name="author" content="موقع القرآن الكريم" />
-		<meta name="robots" content="index, follow" />
-		<meta
-			property="og:title"
-			content="موقع القرآن الكريم - تلاوة وتفسير القرآن"
-		/>
-		<meta
-			property="og:description"
-			content="اكتشف جمال القرآن الكريم مع قراءة، استماع، وتفسير كامل لجميع السور."
-		/>
-		<meta property="og:image" content="/imgs/cover.png" />
-		<!-- ضع رابط الصورة الخاصة بالموقع -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://example.com" />
-		<!-- ضع رابط موقعك -->
-		<meta property="og:locale" content="ar_AR" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="موقع القرآن الكريم" />
-		<meta
-			name="twitter:description"
-			content="استمتع بقراءة القرآن الكريم وتفسيره مع ميزات تسهل الفهم."
-		/>
-		<meta name="twitter:image" content="/imgs/cover.png" />
-		<link rel="stylesheet" href="/styles/login.css" />
-		<link rel="icon" type="image/x-icon" href="/imgs/img-main/Logo.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="موقع مخصص لقراءة واستماع القرآن الكريم كاملاً مع تفسير وميزات إضافية لتسهيل الفهم والبحث."
+    />
+    <meta
+      name="keywords"
+      content="القرآن الكريم, قراءة القرآن, استماع القرآن, تفسير القرآن, سور القرآن"
+    />
+    <meta name="author" content="موقع القرآن الكريم" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="موقع القرآن الكريم - تلاوة وتفسير القرآن"
+    />
+    <meta
+      property="og:description"
+      content="اكتشف جمال القرآن الكريم مع قراءة، استماع، وتفسير كامل لجميع السور."
+    />
+    <meta property="og:image" content="/imgs/cover.png" />
+    <!-- ضع رابط الصورة الخاصة بالموقع -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <!-- ضع رابط موقعك -->
+    <meta property="og:locale" content="ar_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="موقع القرآن الكريم" />
+    <meta
+      name="twitter:description"
+      content="استمتع بقراءة القرآن الكريم وتفسيره مع ميزات تسهل الفهم."
+    />
+    <meta name="twitter:image" content="/imgs/cover.png" />
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="icon" type="image/x-icon" href="/imgs/img-main/Logo.png" />
 
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-		/>
-		<link rel="stylesheet" href="../styles/login-media.css" />
-		<title>Al-Quran Kareem</title>
-	</head>
-	<body>
-		<section class="container">
-			<img
-				class="img-media"
-				src="/imgs/mobilelogin.png"
-				alt=""
-				style="display: none"
-			/>
-			<img src="/imgs/login-img.png" alt="Login Image" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/login-media.css" />
+    <title>Al-Quran Kareem</title>
+  </head>
+  <body>
+    <section class="container">
+      <img class="img-media" src="/imgs/mobilelogin.png" alt="" />
+      <img class="BG" src="/imgs/login-img.png" alt="Login Image" />
 
-			<div class="info">
-				<h1>Log in</h1>
-				<h3>
-					Start your day by reading the holy verses of the <br />
-					Al-Quran.
-				</h3>
-				<form id="login-form">
-					<div class="input-container">
-						<input
-							id="email"
-							type="email"
-							name="email"
-							placeholder="Email"
-							required
-						/>
-						<span class="icon">
-							<i class="fa fa-envelope"></i>
-						</span>
-					</div>
+      <div class="info">
+        <h1>Log in</h1>
+        <h3>
+          Start your day by reading the holy verses of the <br />
+          Al-Quran.
+        </h3>
+        <form id="login-form">
+          <div class="input-container">
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </div>
 
-					<div class="input-container">
-						<input
-							id="password"
-							type="password"
-							name="password"
-							placeholder="Password"
-							required
-						/>
-						<button
-							id="visibile-button"
-							type="button"
-							class="icon"
-							onclick="togglePasswordVisibility()"
-						>
-							<i class="fa fa-eye"></i>
-						</button>
-					</div>
+          <div class="input-container">
+            <input
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <button
+              id="visibile-button"
+              type="button"
+              class="icon"
+              onclick="togglePasswordVisibility()"
+            >
+              <i class="fa fa-eye"></i>
+            </button>
+          </div>
 
-					<button class="btn1" type="submit">
-						<h1>Log in</h1>
-						<h1><i class="fa-solid fa-arrow-right"></i></h1>
-					</button>
+          <button class="btn1" type="submit">
+            <h1>Log in</h1>
+            <h1><i class="fa-solid fa-arrow-right"></i></h1>
+          </button>
 
-					<div class="icon-login">
-						<img src="/imgs/image 12.png" alt="Icon 1" />
-						<img src="/imgs/image 13.png" alt="Icon 2" />
-					</div>
-				</form>
-				<p class="t-reg">
-					Don't have an account yet?
-					<a href="/pages/register.html">Register</a>
-				</p>
-			</div>
-		</section>
+          <div class="icon-login">
+            <img src="/imgs/image 12.png" alt="Icon 1" />
+            <img src="/imgs/image 13.png" alt="Icon 2" />
+          </div>
+        </form>
+        <p class="t-reg">
+          Don't have an account yet? 
+          <a href="/pages/register.html"> Register</a>
+        </p>
+      </div>
+    </section>
+    <footer>
+      <p>© 2025 quran Software Labs, All Rights Reserved.</p>
 
-		<script type="module" src="/scripts/auth.js"></script>
-		<script type="module" src="/scripts/login.js"></script>
-	</body>
+      <div class="footer-icon">
+        <a href=""><i class="fa-brands fa-discord"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </footer>
+
+    <script type="module" src="/scripts/auth.js"></script>
+    <script type="module" src="/scripts/login.js"></script>
+  </body>
 </html>

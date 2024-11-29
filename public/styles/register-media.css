@@ -12,14 +12,12 @@
         display: none;
     }
     body {
-        
         display: grid;
     }
     .img-media {
-        
         position: absolute;
         top: 0;
-        left: 0;
+        /* left: 0; */
         width: 100%;
         height: fit-content;
         z-index: -1;
@@ -44,6 +42,7 @@
         font-size: 14px;
     }
     .input-container input {
+        width: 327px;
         
     }
     footer {
@@ -52,6 +51,7 @@
         text-align: center;
         align-items: center;
         padding: 20px;
+        margin-top: 130px;
     }
     footer p {
         color:#32B7C5;

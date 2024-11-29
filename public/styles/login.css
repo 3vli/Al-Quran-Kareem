@@ -74,14 +74,14 @@
 }
 .icon-login {
 	display: flex;
+	justify-content: center;
 	margin-top: 40px;
 	text-align: center;
 	align-items: center;
 }
 .icon-login img:first-child {
-	margin-left: 93px;
 	cursor: pointer;
-	padding: 0 42px;
+    margin-right: 35px;
 }
 .icon-login img {
 	cursor: pointer;
@@ -106,8 +106,9 @@
 }
 .t-reg {
 	font-size: 14px;
-	position: relative;
-	left: 90px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 	margin-top: 20px;
 }
 .t-reg a {

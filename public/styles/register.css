@@ -40,7 +40,7 @@
     padding: 10px;
     padding-right: 40px; /* مساحة لأيقونة */
     font-size: 16px;
-    width: 100%;
+    width: 380px;
     border-radius: 8px;
 }
 
@@ -76,15 +76,15 @@
 }
 .icon-login {
     display: flex;
-    margin-top: 40px;
+    justify-content: center;
     text-align: center;
     align-items: center;
+    margin-top: 40px;
     
 }
-.icon-login img:first-child {   
-    margin-left: 93px;
+.icon-login img:first-child { 
     cursor: pointer;
-    padding: 0 42px;
+    margin-right: 40px;
     
 }
 .icon-login img {
@@ -110,8 +110,8 @@
 }
 .t-reg {
     font-size: 14px;
-    position: relative;
-    left: 90px;
+    display: flex;
+    justify-content: center;
     margin-top:20px;
 
 }

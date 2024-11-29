@@ -69,7 +69,6 @@ header a:hover {
 	color: #fff;
 }
 
-/* تصميم الصورة الرمزية */
 .avatar {
 	width: 40px;
 	height: 40px;
@@ -114,8 +113,67 @@ header a:hover {
 	border-radius: 8px;
 }
 
-/* تصميم زر تسجيل الخروج */
 .logout {
 	color: red;
 	font-weight: bold;
+}
+.surah-content a {
+	padding: 16px;
+	background-color: #00CBBF;
+	border-radius: 16px;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.6s ease;
+	margin: 0 20px;
+
+}
+.surah-content > a:hover {
+	transform: scale(1.1);
+
+}
+.surah-c {
+	width: 491.04px;
+	height: 832px;
+	background-color: #E6F3EC;
+	border-radius: 16px;
+}
+.surah-content {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+
+}
+.surah-header {
+	padding:24px;
+	display: flex;
+	/* justify-content: center; */
+	text-align: center; 
+	align-items: center;
+}
+.surah-header select {
+	padding: 8px 8px 8px 16px;
+	width: 189.52px;
+	height: 40px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin: 0 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: #007B88;
+	color: #0EFBEB;
+    justify-content: space-between;
+    display: flex;
+    padding: 24px 134px;
+}
+.footer-icon a  {
+	color: #0EFBEB;
+	gap: 10px;
+	width: 20px;
+	font-size: 24px;
+	text-decoration: none;
+	margin-right: 20px;
 }
