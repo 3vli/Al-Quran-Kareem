@@ -1,0 +1,20 @@
+{
+	"routes": [
+		{
+			"src": "/",
+			"dest": "/index.html"
+		},
+		{
+			"src": "/login",
+			"dest": "/src/pages/login.html"
+		},
+		{
+			"src": "/register",
+			"dest": "/src/pages/register.html"
+		},
+		{
+			"src": "/surah",
+			"dest": "/src/pages/surah.html"
+		}
+	]
+}
