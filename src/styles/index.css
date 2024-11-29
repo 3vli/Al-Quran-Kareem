@@ -24,7 +24,6 @@ header {
 	z-index: 3;
 }
 .input-container {
-	position: relative;
 	display: flex;
 	text-align: center;
 	align-items: center;

@@ -1,0 +1,54 @@
+@media screen and (max-width: 425px) {
+    body {
+        width: 100%;
+
+    }
+    .bg-mobile {
+        position: absolute;
+        top: 0;
+        display: flex;
+        width: 100%;
+    }
+    .bg {
+        display: none;
+    }
+    .input-container {
+        display: flex;
+        width: 400px;
+        
+    }
+    .user-info span {
+        display: none;
+    }
+    .user-menu {
+        position: relative;
+        left: 150px;
+        top: -45px;
+    }
+    .img-logo  {
+        width: 156px;
+    }
+    .fr-rd a{
+        padding: 13px;
+    }
+    .card {
+        width: 342px;
+    }
+    #surah-list {
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    footer {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
+@media screen and (min-width: 425px) {
+    .bg-mobile {
+        display: none;
+    }
+}
