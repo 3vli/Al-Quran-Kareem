@@ -1,4 +1,4 @@
-import { surahs } from "../constants.js";
+import { surahs } from "../auth/constants";
 
 const surahList = document.getElementById("surah-list");
 
