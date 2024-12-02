@@ -1,45 +1,40 @@
-
-
 * {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
 }
 border {
-    background-color: #f2f2f2;
-
+	background-color: #f2f2f2;
 }
 .BG {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: fit-content;
-    z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: fit-content;
+	z-index: -1;
 }
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 header .logo {
-    width: 300px;
-
+	width: 300px;
 }
 header a {
-    font-size: 24px;
-    color: #BDBDBD;
-    /* margin-right: 30px */
-    position: relative;
-    right: 300px;
-    cursor: pointer;
-    transition: 0.6s ease;
-    
+	font-size: 24px;
+	color: #bdbdbd;
+	/* margin-right: 30px */
+	position: relative;
+	right: 300px;
+	cursor: pointer;
+	transition: 0.6s ease;
 }
 header a:hover {
-    transform: translateX(-5px);
+	transform: translateX(-5px);
 }
 
 /* تصميم القائمة الأساسية */
@@ -119,22 +114,20 @@ header a:hover {
 }
 .surah-content a {
 	padding: 16px;
-	background-color: #00CBBF;
+	background-color: #00cbbf;
 	border-radius: 16px;
 	color: #fff;
 	text-decoration: none;
 	transition: 0.6s ease;
 	margin: 0 20px;
-
 }
 .surah-content > a:hover {
 	transform: scale(1.1);
-
 }
 .surah-c {
 	width: 491.04px;
 	height: 832px;
-	background-color: #E6F3EC;
+	background-color: #e6f3ec;
 	border-radius: 16px;
 }
 .surah-content {
@@ -143,13 +136,12 @@ header a:hover {
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 20px;
-
 }
 .surah-header {
-	padding:24px;
+	padding: 24px;
 	display: flex;
 	/* justify-content: center; */
-	text-align: center; 
+	text-align: center;
 	align-items: center;
 }
 .surah-header select {
@@ -162,18 +154,24 @@ header a:hover {
 }
 
 footer {
-    width: 100%;
-    background-color: #007B88;
-	color: #0EFBEB;
-    justify-content: space-between;
-    display: flex;
-    padding: 24px 134px;
+	width: 100%;
+	background-color: #007b88;
+	color: #0efbeb;
+	justify-content: space-between;
+	display: flex;
+	padding: 24px 134px;
 }
-.footer-icon a  {
-	color: #0EFBEB;
+.footer-icon a {
+	color: #0efbeb;
 	gap: 10px;
 	width: 20px;
 	font-size: 24px;
 	text-decoration: none;
 	margin-right: 20px;
+}
+
+.amiri-quran-regular {
+	font-family: "Amiri Quran", serif;
+	font-weight: 400;
+	font-style: normal;
 }

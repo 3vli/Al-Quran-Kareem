@@ -2,16 +2,16 @@ import { surahs } from "../auth/constants";
 
 const surahList = document.getElementById("surah-list");
 
-surahs.forEach((surah, index) => {
+surahs.forEach((surah) => {
 	const card = document.createElement("div");
 	card.className = "card";
 	card.onclick = () => {
-		showSurahSection(index);
+		showSurahSection(surah.number);
 	};
 
 	const cardNumber = document.createElement("div");
 	cardNumber.className = "card-number";
-	cardNumber.textContent = index + 1;
+	cardNumber.textContent = surah.number;
 
 	const cardContent = document.createElement("div");
 	cardContent.className = "card-content";
@@ -21,9 +21,9 @@ surahs.forEach((surah, index) => {
 
 	const surahDetails = document.createElement("p");
 	surahDetails.innerHTML = `
-	<span><i class="fa-solid fa-location-crosshairs"></i> ${surah.type}</span> 
-	<i class="fa-solid fa-minus"></i>
-	<span>${surah.ayat} Ayat</span>`;
+		<span><i class="fa-solid fa-location-crosshairs"></i> ${surah.type}</span>
+		<i class="fa-solid fa-minus"></i>
+		<span>${surah.ayat} Ayat</span>`;
 
 	cardContent.appendChild(surahName);
 	cardContent.appendChild(surahDetails);
@@ -35,7 +35,6 @@ surahs.forEach((surah, index) => {
 });
 
 function showSurahSection(surahNumber) {
-	const surah = surahs[surahNumber];
-	console.log(surah.name);
-	window.location.href = "/surah";
+	const surah = surahs[surahNumber - 1];
+	window.location.href = `/surah?surahNumber=${surah.number}&juzNumber=${surah.juz}`;
 }
