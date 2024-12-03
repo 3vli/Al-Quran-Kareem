@@ -36,5 +36,5 @@ surahs.forEach((surah) => {
 
 function showSurahSection(surahNumber) {
 	const surah = surahs[surahNumber - 1];
-	window.location.href = `/surah?surahNumber=${surah.number}&juzNumber=${surah.juz}`;
+	window.location.href = `/surah?surahNumber=${surah.number}&juzNumber=${surah.juz[0]}`;
 }

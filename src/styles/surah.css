@@ -175,3 +175,22 @@ footer {
 	font-weight: 400;
 	font-style: normal;
 }
+
+#content-surah {
+	padding: 5px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: content;
+	gap: 10px;
+}
+
+.aya-number {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	display: flex;
+	align-items: end;
+	justify-content: center;
+	font-size: 15px;
+	border: 2px red solid;
+}

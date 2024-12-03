@@ -1,16 +1,18 @@
 import { surahs } from "../auth/constants";
 import { redirect } from "../lib/redirect";
+import { getSearchQuery } from "../lib/get-search-query";
+import { getSurahContent } from "./surah-content";
 
 const selectElement = document.getElementById("juz-opt");
 const selectElementsurah = document.getElementById("surat-opt");
-const url = window.location.search;
-const params = new URLSearchParams(url);
+const params = getSearchQuery();
 const querySurah = params.get("surahNumber");
 const queryJuz = params.get("juzNumber");
+getSurahContent(querySurah);
 
 const setOptions = (ignore, juz) => {
 	const loapSurahs = juz
-		? surahs.filter((surah) => surah.juz == juz)
+		? surahs.filter((surah) => surah.juz.includes(Number(juz)))
 		: surahs;
 
 	if (ignore !== "surahs") {
@@ -39,7 +41,7 @@ const setOptions = (ignore, juz) => {
 	return { surahOptions: loapSurahs };
 };
 
-setOptions(queryJuz);
+setOptions(undefined, queryJuz);
 
 const optionsChangeHandler = (element, queryName, attributeName) => {
 	const chosenOption = element.selectedOptions[0];
@@ -51,7 +53,12 @@ const optionsChangeHandler = (element, queryName, attributeName) => {
 };
 
 selectElementsurah.addEventListener("change", () => {
-	optionsChangeHandler(selectElementsurah, "surahNumber", "surah-number");
+	const surahNumber = optionsChangeHandler(
+		selectElementsurah,
+		"surahNumber",
+		"surah-number",
+	);
+	getSurahContent(surahNumber);
 });
 
 selectElement.addEventListener("change", () => {
@@ -67,5 +74,6 @@ selectElement.addEventListener("change", () => {
 		juzNumber === "0" ? undefined : juzNumber,
 	);
 	params.set("surahNumber", surahOptions[0].number);
+	getSurahContent(surahOptions[0].number);
 	redirect(`?${params.toString()}`);
 });
