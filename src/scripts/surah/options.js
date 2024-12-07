@@ -48,6 +48,7 @@ const optionsChangeHandler = (element, queryName, attributeName) => {
 	const optionSurahNumber = chosenOption.getAttribute(attributeName);
 	params.set(queryName, optionSurahNumber);
 
+	params.delete("pageNumber");
 	redirect(`?${params.toString()}`);
 	return optionSurahNumber;
 };
@@ -74,6 +75,6 @@ selectElement.addEventListener("change", () => {
 		juzNumber === "0" ? undefined : juzNumber,
 	);
 	params.set("surahNumber", surahOptions[0].number);
-	getSurahContent(surahOptions[0].number);
 	redirect(`?${params.toString()}`);
+	getSurahContent(surahOptions[0].number);
 });

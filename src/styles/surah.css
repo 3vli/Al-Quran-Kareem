@@ -27,7 +27,7 @@ header .logo {
 header a {
 	font-size: 24px;
 	color: #bdbdbd;
-	/* margin-right: 30px */
+
 	position: relative;
 	right: 300px;
 	cursor: pointer;
@@ -37,16 +37,14 @@ header a:hover {
 	transform: translateX(-5px);
 }
 
-/* تصميم القائمة الأساسية */
 .user-menu {
 	position: relative;
 	left: 400px;
-	/* top: -60px; */
+
 	display: inline-block;
 	font-family: Arial, sans-serif;
 }
 
-/* تصميم المعلومات العلوية */
 .user-info {
 	display: flex;
 	align-items: center;
@@ -79,7 +77,6 @@ header a:hover {
 	text-transform: uppercase;
 }
 
-/* تصميم القائمة المنسدلة */
 .dropdown {
 	display: none;
 	position: absolute;
@@ -112,6 +109,7 @@ header a:hover {
 	color: red;
 	font-weight: bold;
 }
+
 .surah-content a {
 	padding: 16px;
 	background-color: #00cbbf;
@@ -126,7 +124,7 @@ header a:hover {
 }
 .surah-c {
 	width: 491.04px;
-	height: 832px;
+	min-height: 832px;
 	background-color: #e6f3ec;
 	border-radius: 16px;
 }
@@ -140,7 +138,7 @@ header a:hover {
 .surah-header {
 	padding: 24px;
 	display: flex;
-	/* justify-content: center; */
+
 	text-align: center;
 	align-items: center;
 }
@@ -177,20 +175,24 @@ footer {
 }
 
 #content-surah {
-	padding: 5px 10px;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: content;
-	gap: 10px;
+	padding: 20px;
+	font-size: 21.2px;
+	line-height: 2.5;
+	text-align: justify;
+	direction: rtl;
 }
 
 .aya-number {
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	display: flex;
-	align-items: end;
+	display: inline-flex;
 	justify-content: center;
-	font-size: 15px;
-	border: 2px red solid;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #36c2a7;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	margin-left: 5px;
 }

@@ -9,9 +9,13 @@ export const getSurahs = async () => {
 	}
 };
 
-export const getSurah = async (surahNumber) => {
+export const getSurah = async (surahNumber, limit) => {
 	try {
-		const { data: res } = await baseAPI.get(`/surah/${surahNumber}`);
+		const { data: res } = await baseAPI.get(
+			`/surah/${surahNumber}${
+				limit ? `?offset=${limit}&limit=${limit}` : ""
+			}`,
+		);
 		return res.data;
 	} catch (error) {
 		throw { error };
