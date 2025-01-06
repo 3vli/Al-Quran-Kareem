@@ -12,29 +12,74 @@ getSurahContent(querySurah);
 
 const setOptions = (ignore, juz) => {
 	const loapSurahs = juz
-		? surahs.filter((surah) => surah.juz.includes(Number(juz)))
+		? surahs.filter(
+				(
+					surah,
+				) =>
+					surah.juz.includes(
+						Number(
+							juz,
+						),
+					),
+		  )
 		: surahs;
 
 	if (ignore !== "surahs") {
-		for (let y = 0; y < loapSurahs.length; y++) {
-			const currentSurah = loapSurahs[y];
-			const optionsurah = document.createElement("option");
-			optionsurah.text = currentSurah.name;
-			optionsurah.value = currentSurah.name;
-			optionsurah.defaultSelected = currentSurah.number == querySurah;
-			optionsurah.setAttribute("surah-number", currentSurah.number);
-			selectElementsurah.appendChild(optionsurah);
+		for (
+			let y = 0;
+			y <
+			loapSurahs.length;
+			y++
+		) {
+			const currentSurah =
+				loapSurahs[
+					y
+				];
+			const optionsurah =
+				document.createElement(
+					"option",
+				);
+			optionsurah.text =
+				currentSurah.name;
+			optionsurah.value =
+				currentSurah.name;
+			optionsurah.defaultSelected =
+				currentSurah.number ==
+				querySurah;
+			optionsurah.setAttribute(
+				"surah-number",
+				currentSurah.number,
+			);
+			selectElementsurah.appendChild(
+				optionsurah,
+			);
 		}
 	}
 
 	if (ignore !== "juzs") {
-		for (let i = 1; i <= 30; i++) {
-			const option = document.createElement("option");
+		for (
+			let i = 1;
+			i <=
+			30;
+			i++
+		) {
+			const option =
+				document.createElement(
+					"option",
+				);
 			option.text = `جزء ${i}`;
-			option.value = i;
-			option.defaultSelected = i == queryJuz;
-			option.setAttribute("juz-number", i);
-			selectElement.appendChild(option);
+			option.value =
+				i;
+			option.defaultSelected =
+				i ==
+				queryJuz;
+			option.setAttribute(
+				"juz-number",
+				i,
+			);
+			selectElement.appendChild(
+				option,
+			);
 		}
 	}
 
@@ -44,8 +89,13 @@ const setOptions = (ignore, juz) => {
 setOptions(undefined, queryJuz);
 
 const optionsChangeHandler = (element, queryName, attributeName) => {
-	const chosenOption = element.selectedOptions[0];
-	const optionSurahNumber = chosenOption.getAttribute(attributeName);
+	const chosenOption =
+		element
+			.selectedOptions[0];
+	const optionSurahNumber =
+		chosenOption.getAttribute(
+			attributeName,
+		);
 	params.set(queryName, optionSurahNumber);
 
 	params.delete("pageNumber");
@@ -72,9 +122,17 @@ selectElement.addEventListener("change", () => {
 	console.log(juzNumber);
 	const { surahOptions } = setOptions(
 		"juzs",
-		juzNumber === "0" ? undefined : juzNumber,
+		juzNumber ===
+			"0"
+			? undefined
+			: juzNumber,
 	);
-	params.set("surahNumber", surahOptions[0].number);
+	params.set(
+		"surahNumber",
+		surahOptions[0]
+			.number,
+	);
 	redirect(`?${params.toString()}`);
+	console.log(surahOptions[0].number);
 	getSurahContent(surahOptions[0].number);
 });
