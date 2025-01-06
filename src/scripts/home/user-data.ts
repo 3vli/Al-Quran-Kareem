@@ -1,4 +1,4 @@
-import { supabase } from "/src/scripts/lib/supabase.js";
+import { supabase } from "../lib/supabase";
 
 const asyncCode = async () => {
 	const { data } = await supabase.auth.getUser();
@@ -6,7 +6,7 @@ const asyncCode = async () => {
 
 	elements.forEach((element) => {
 		const attr = element.getAttribute("data-user");
-		element.innerHTML = data.user.user_metadata[attr];
+		element.innerHTML = data.user?.user_metadata[attr ?? ""];
 	});
 };
 

@@ -11,7 +11,7 @@ surahs.forEach((surah) => {
 
 	const cardNumber = document.createElement("div");
 	cardNumber.className = "card-number";
-	cardNumber.textContent = surah.number;
+	cardNumber.textContent = String(surah.number);
 
 	const cardContent = document.createElement("div");
 	cardContent.className = "card-content";
@@ -31,10 +31,10 @@ surahs.forEach((surah) => {
 	card.appendChild(cardNumber);
 	card.appendChild(cardContent);
 
-	surahList.appendChild(card);
+	surahList?.appendChild(card);
 });
 
-function showSurahSection(surahNumber) {
+function showSurahSection(surahNumber: number) {
 	const surah = surahs[surahNumber - 1];
 	window.location.href = `/surah?surahNumber=${surah.number}&juzNumber=${surah.juz[0]}`;
 }

@@ -1,17 +1,17 @@
-import { supabase } from "/src/scripts/lib/supabase.js";
+import { supabase } from "../lib/supabase";
 
 const form = document.getElementById("login-form");
 
-form.addEventListener("submit", async (e) => {
+form?.addEventListener("submit", async (e) => {
 	e.preventDefault();
 
-	const email = document.getElementById("email").value;
-	const password = document.getElementById("password").value;
+	const email = document.querySelector<HTMLInputElement>("#email")?.value;
+	const password = document.querySelector<HTMLInputElement>("#password")?.value;
 
 	try {
 		const { data, error } = await supabase.auth.signInWithPassword({
-			email: email,
-			password: password,
+			email: email ?? "",
+			password: password ?? "",
 		});
 
 		if (error) {
